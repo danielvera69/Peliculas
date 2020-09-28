@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+{% block main %}
+{% load static %}
+<div class="container-fluid" style="margin-top: 3rem;">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 id="titulo" class="font-weight-bold">Mantenimiento de Peliculas</h3>
+                </div>
+                <div class="col-md-4 ">
+                    <a href="{% url 'pelicula' %}" class="btn btn-primary float-right">Regresar</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row ">
+                <div class="col">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <!-- <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"
+                                for="id_{{ form.nombre.name }}">{{form.nombre.label}}</label>
+                            <div class="col-sm-6">
+                                {{form.nombre}} 
+                            </div>
+                        </div> -->
+                        <button class="btn btn-success btn-block" type="submit">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% load static %}
+<nav class="navbar navbar-dark text-light bg-dark d-flex justify-content-center">
+    <form class=" form-inline">
+        <div class="input-group ">
+            <div class="input-group-prepend">
+                <a href="{% url 'inicio' %}"><span class="input-group-text bg-warning text-light  font-weight-bold"
+                        id="basic-addon1">β</span></a>
+            </div>
+            <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
+                aria-describedby="basic-addon1">
+
+            <div class="input-group-append bg-warning">
+                <button type="button" class="btn btn-outline-secondary">Opciones</button>
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu bg-warning text-light">
+                    <a class="dropdown-item text-light font-italic font-weight-bold"
+                        href="{% url 'pelicula' %}">Peliculas</a>
+                    <a class="dropdown-item text-light font-italic font-weight-bold" href="#">Favoritos</a>
+                    <a class="dropdown-item text-light font-italic font-weight-bold" href="#">Historial</a>
+                    <div role="separator text-light" class="dropdown-divider"></div>
+                    <a class="dropdown-item text-light font-italic font-weight-bold" href="#">Perfil usuario</a>
+                    <div role="separator text-light" class="dropdown-divider"></div>
+                    <a class="dropdown-item text-light font-italic font-weight-bold" href="/admin">Administracion</a>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</nav>
+<!-- menu vertical Sidenav -->
